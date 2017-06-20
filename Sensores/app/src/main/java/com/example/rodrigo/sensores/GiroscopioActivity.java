@@ -1,7 +1,10 @@
 package com.example.rodrigo.sensores;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -36,5 +39,10 @@ public class GiroscopioActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         gravityView.unRegisterListener();
+    }
+
+    public void irInfo(View v){
+        Intent i = new Intent(this, GiroscopioInfo.class);
+        startActivity(i);
     }
 }
