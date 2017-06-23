@@ -1,6 +1,12 @@
 package com.example.rodrigo.sensores;
 
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * Created by CASTI on 19/06/2017.
@@ -22,7 +28,7 @@ public class VibradorActivity extends AppCompatActivity{
     }
     public void vibrarUnaVez (View view){
         if(!vibrador.hasVibrator()){
-            Toast.makeText(VibracionActivity.this, "No soporta vibracion",Toast.LENGTH_LONG).show();
+            Toast.makeText(VibradorActivity.this, "No soporta vibracion",Toast.LENGTH_LONG).show();
             return;
         }
         if(estaVibrando)
@@ -43,7 +49,7 @@ public class VibradorActivity extends AppCompatActivity{
 
     public void vibrarRepetidas (View view){
         if(!vibrador.hasVibrator()){
-            Toast.makeText(VibracionActivity.this, "No soporta vibracion",Toast.LENGTH_LONG).show();
+            Toast.makeText(VibradorActivity.this, "No soporta vibracion",Toast.LENGTH_LONG).show();
             return;
         }
         if(estaVibrando)
@@ -60,7 +66,7 @@ public class VibradorActivity extends AppCompatActivity{
 
     public void detener(View view){
         if(!vibrador.hasVibrator()){
-            Toast.makeText(VibracionActivity.this, "No soporta vibracion",Toast.LENGTH_LONG).show();
+            Toast.makeText(VibradorActivity.this, "No soporta vibracion",Toast.LENGTH_LONG).show();
             return;
         }
         if(estaVibrando){
